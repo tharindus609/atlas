@@ -1,0 +1,19 @@
+services:
+  caddy:
+    container_name: caddy
+    image: caddy:latest
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+      - 443:443/udp
+      - 2019:2019 # for prometheus metrics
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+      - ../configs/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ../configs/caddy/site-data:/srv
+
+volumes:
+  caddy_data:
+  caddy_config:

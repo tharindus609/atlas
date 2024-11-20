@@ -1,0 +1,54 @@
+{
+    email   admin@tharindur.dev
+
+    servers {
+        metrics
+    }
+}
+
+:2019 {
+    metrics /metrics
+}
+
+tharindur.dev, www.tharindur.dev {
+    root site-data
+    templates
+    file_server {
+        hide .git
+    }
+}
+
+portainer.tharindur.dev {
+    reverse_proxy pi-core-1:9443
+}
+
+plex.tharindur.dev {
+    reverse_proxy olympus:32400
+}
+
+plex-stats.tharindur.dev {
+    reverse_proxy olympus:8181
+}
+
+sonarr.tharindur.dev {
+    reverse_proxy olympus:8989
+}
+
+pihole.tharindur.dev {
+    reverse_proxy pi-core-1:8080
+}
+
+graph.tharindur.dev {
+    reverse_proxy olympus:3000
+}
+
+yspotify.tharindur.dev {
+    handle_path /api/* {
+        reverse_proxy olympus:7000
+    }
+    reverse_proxy olympus:7001
+}
+
+nc.tharindur.dev {
+    reverse_proxy olympus:8080
+}

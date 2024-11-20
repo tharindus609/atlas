@@ -1,3 +1,5 @@
 include:
   - compose-files/pihole.yaml
-  - compose-files/portainer.yaml
+  - compose-files/portainer-agent.yaml
+  - compose-files/portainer-server.yaml
+  - compose-files/caddy.yaml
