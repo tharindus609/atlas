@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       TZ: 'Europe/London'
-      FTLCONF_LOCAL_IPV4: 192.168.0.3
+      FTLCONF_LOCAL_IPV4: 192.168.0.2
       WEB_PORT: 8080
       DHCP_ACTIVE: true
       DHCP_START: 192.168.0.100
@@ -15,15 +15,16 @@ services:
       PIHOLE_DOMAIN: bi-frost
       DHCP_IPv6: true
       DHCP_rapid_commit: true
-      VIRTUAL_HOST: pihole.bi-frost.local
+      VIRTUAL_HOST: pihole.bi-frost
     cap_add:
       - NET_ADMIN
     dns:
-      - 192.168.0.3
+      - 192.168.0.2
     volumes:
       - pihole-dnsmasqd:/etc/dnsmasq.d
       - pihole-data:/etc/pihole
       - ../configs/pihole/07-dhcp-options.conf:/etc/dnsmasq.d/07-dhcp-options.conf
+      - ../configs/pihole/custom.list:/etc/pihole/custom.list
     network_mode: host
 
 volumes:
