@@ -1,0 +1,32 @@
+version: "3"
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    hostname: pihole.bi-frost
+    restart: always
+    environment:
+      TZ: 'Europe/London'
+      FTLCONF_LOCAL_IPV4: 192.168.0.3
+      WEB_PORT: 8080
+      DHCP_ACTIVE: true
+      DHCP_START: 192.168.0.100
+      DHCP_END: 192.168.0.200
+      DHCP_ROUTER: 192.168.0.1
+      PIHOLE_DOMAIN: bi-frost
+      DHCP_IPv6: true
+      DHCP_rapid_commit: true
+      VIRTUAL_HOST: pihole.bi-frost.local
+    cap_add:
+      - NET_ADMIN
+    dns:
+      - 192.168.0.3
+    volumes:
+      - dnsmasqd:/etc/dnsmasq.d
+      - data:/etc/pihole
+      - configs/pihole/07-dhcp-options.conf:/etc/dnsmasq.d/07-dhcp-options.conf
+    network_mode: host
+
+volumes:
+  data:
+  dnsmasqd:
