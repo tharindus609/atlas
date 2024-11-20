@@ -15,7 +15,7 @@ services:
     ports:
       - 9443:9000
     volumes:
-      - data:/data
+      - portainer-data:/data
 
 volumes:
-  data:
+  portainer-data:
