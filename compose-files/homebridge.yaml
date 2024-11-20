@@ -1,6 +1,6 @@
 services:
   homebridge:
-    image: homebridge/homebridge:ubuntu
+    image: homebridge/homebridge:latest
     container_name: homebridge
     restart: always
     network_mode: host
@@ -8,5 +8,11 @@ services:
       - HOMEBRIDGE_CONFIG_UI_PORT=8581
     volumes:
       - homebridge:/homebridge
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '1'
+
 volumes:
   homebridge:
