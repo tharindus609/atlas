@@ -1,0 +1,4 @@
+include:
+  - compose-files/tautulli.yaml
+  - compose-files/sonarr.yaml
+  - compose-files/plex.yaml
