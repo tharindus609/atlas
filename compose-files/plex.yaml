@@ -14,7 +14,7 @@ services:
     environment:
       - TZ=Europe/London
       - ADVERTISE_IP=http://192.168.0.126:32400
-      - PLEX_CLAIM=claim-aG_m2kTFMkQ1YztW2uPv
+      - PLEX_CLAIM=claim-ymhbxQ1mNKnNR1cJDQNF
       - NVIDIA_VISIBLE_DEVICES=all
     hostname: luthor.bi-frost
     volumes:
