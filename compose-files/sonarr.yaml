@@ -10,7 +10,7 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - /media:/tv
+      - /media:/media
       - sonarr_config:/config
 
 volumes:

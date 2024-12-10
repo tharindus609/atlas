@@ -1,4 +1,4 @@
-Services:
+services:
   tautulli:
     container_name: tautulli
     image: lscr.io/linuxserver/tautulli:latest
