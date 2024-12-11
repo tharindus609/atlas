@@ -56,3 +56,11 @@ yspotify.tharindur.dev {
 nc.tharindur.dev {
     reverse_proxy olympus:8080
 }
+
+bi-frost.xyz, www.bi-frost.xyz {
+    root site-data
+    templates
+    file_server {
+        hide .git
+    }
+}
