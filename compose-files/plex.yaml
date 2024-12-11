@@ -14,6 +14,7 @@ services:
     environment:
       - TZ=Europe/London
       - ADVERTISE_IP=http://192.168.0.126:32400
+      - VERSION=docker
       - PLEX_CLAIM=claim-ymhbxQ1mNKnNR1cJDQNF
       - NVIDIA_VISIBLE_DEVICES=all
     hostname: luthor.bi-frost
@@ -22,6 +23,8 @@ services:
       - plex_config:/config
     tmpfs:
       - /transcode
+    device:
+      - /dev/dri:/dev/dri
 
 volumes:
   plex_config:
