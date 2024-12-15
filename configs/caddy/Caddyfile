@@ -10,7 +10,7 @@
     metrics /metrics
 }
 
-tharindur.dev, www.tharindur.dev {
+tharindur.dev, www.tharindur.dev, bi-frost.xyz, www.bi-frost.xyz {
     root site-data
     templates
     file_server {
@@ -38,29 +38,6 @@ pihole.tharindur.dev {
     reverse_proxy pi-core-1:8080
 }
 
-graph.tharindur.dev {
-    reverse_proxy olympus:3000
-}
-
 homebridge.tharindur.dev {
     reverse_proxy pi-core-1:8581
-}
-
-yspotify.tharindur.dev {
-    handle_path /api/* {
-        reverse_proxy olympus:7000
-    }
-    reverse_proxy olympus:7001
-}
-
-nc.tharindur.dev {
-    reverse_proxy olympus:8080
-}
-
-bi-frost.xyz, www.bi-frost.xyz {
-    root site-data
-    templates
-    file_server {
-        hide .git
-    }
 }
