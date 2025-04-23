@@ -1,16 +1,8 @@
 {
     email   admin@tharindur.dev
-
-    servers {
-        metrics
-    }
 }
 
-:2019 {
-    metrics /metrics
-}
-
-tharindur.dev, www.tharindur.dev, bi-frost.xyz, www.bi-frost.xyz {
+tharindur.dev, www.tharindur.dev {
     root site-data
     templates
     file_server {
@@ -19,29 +11,25 @@ tharindur.dev, www.tharindur.dev, bi-frost.xyz, www.bi-frost.xyz {
 }
 
 portainer.tharindur.dev {
-    reverse_proxy pi-core-1:9443
+    reverse_proxy ares:9443
 }
 
 plex.tharindur.dev {
-    reverse_proxy olympus:32400
-}
-
-plex-stats.tharindur.dev {
-    reverse_proxy olympus:8181
+    reverse_proxy apollo:32400
 }
 
 sonarr.tharindur.dev {
-    reverse_proxy olympus:8989
+    reverse_proxy apollo:30113
 }
 
 pihole.tharindur.dev {
-    reverse_proxy pi-core-1:8080
+    reverse_proxy ares:8080
 }
 
 homebridge.tharindur.dev {
-    reverse_proxy pi-core-1:8581
+    reverse_proxy ares:8581
 }
 
 homeassistant.tharindur.dev {
-    reverse_proxy pi-core-1:8123
+    reverse_proxy ares:8123
 }
