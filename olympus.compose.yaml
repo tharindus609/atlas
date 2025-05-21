@@ -1,6 +1,0 @@
-include:
-  - compose-files/portainer-agent.yaml
-  - compose-files/netdata.yaml
-  - compose-files/tautulli.yaml
-  - compose-files/sonarr.yaml
-  - compose-files/plex.yaml

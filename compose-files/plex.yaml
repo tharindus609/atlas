@@ -5,16 +5,16 @@ services:
     restart: unless-stopped
     network_mode: host
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=568
+      - PGID=568
       - TZ=Europe/London
       - ADVERTISE_IP=http://192.168.0.126:32400
       - VERSION=docker
       - PLEX_CLAIM=claim-ymhbxQ1mNKnNR1cJDQNF
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:
-      - /media:/media
-      - plex_config:/config
+      - /mnt/deadpool/media:/data:ro
+      - /mnt/flash/configs/plex:/config
     tmpfs:
       - /transcode
     devices:

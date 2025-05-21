@@ -6,12 +6,9 @@ services:
     ports:
       - 8989:8989
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=568
+      - PGID=568
       - TZ=Europe/London
     volumes:
-      - /media:/media
-      - sonarr_config:/config
-
-volumes:
-  sonarr_config:
+      - /mnt/deadpool/media/tv_shows:/data
+      - /mnt/flash/configs/sonarr:/config

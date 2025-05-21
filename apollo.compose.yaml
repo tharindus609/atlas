@@ -1,0 +1,4 @@
+include:
+  - compose-files/sonarr.yaml
+  - compose-files/plex.yaml
+  - compose-files/jellyfin.yaml
