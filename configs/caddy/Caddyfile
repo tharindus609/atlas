@@ -11,25 +11,29 @@ tharindur.dev, www.tharindur.dev {
 }
 
 portainer.tharindur.dev {
-    reverse_proxy ares:9443
+    reverse_proxy zeus:9443
 }
 
 plex.tharindur.dev {
     reverse_proxy apollo:32400
 }
 
+jellyfin.tharindur.dev {
+    reverse_proxy apollo:8096
+}
+
 sonarr.tharindur.dev {
-    reverse_proxy apollo:30113
+    reverse_proxy apollo:8989
 }
 
 pihole.tharindur.dev {
-    reverse_proxy ares:8080
+    reverse_proxy zeus:8080
 }
 
 homebridge.tharindur.dev {
-    reverse_proxy ares:8581
+    reverse_proxy zeus:8581
 }
 
 homeassistant.tharindur.dev {
-    reverse_proxy ares:8123
+    reverse_proxy zeus:8123
 }

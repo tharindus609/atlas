@@ -2,7 +2,7 @@ services:
   portainer_agent:
     container_name: protainer_agent
     image: portainer/agent:latest
-    restart: always
+    restart: unless-stopped
     ports:
       - 9001:9001
     volumes:

@@ -1,8 +1,0 @@
-include:
-  - compose-files/pihole.yaml
-  - compose-files/portainer-agent.yaml
-  - compose-files/portainer-server.yaml
-  - compose-files/caddy.yaml
-  - compose-files/homebridge.yaml
-  - compose-files/netdata.yaml
-  - compose-files/homeassistant.yaml
