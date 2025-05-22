@@ -12,6 +12,10 @@ tharindur.dev, www.tharindur.dev {
 
 portainer.tharindur.dev {
     reverse_proxy zeus:9443
+        transport http {
+            tls
+            tls_insecure_skip_verify
+        }
 }
 
 plex.tharindur.dev {
