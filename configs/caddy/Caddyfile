@@ -27,6 +27,10 @@ jellyfin.tharindur.dev {
     reverse_proxy apollo:8096
 }
 
+seerr.tharindur.dev {
+    reverse_proxy zeus:5055
+}
+
 sonarr.tharindur.dev {
     reverse_proxy apollo:8989
 }
