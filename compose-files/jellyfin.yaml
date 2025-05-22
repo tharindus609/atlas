@@ -7,11 +7,16 @@ services:
     environment:
       - PUID=568
       - PGID=568
-      - NVIDIA_VISIBLE_DEVICES=all
     volumes:
       - /mnt/deadpool/media:/data:ro
       - /mnt/flash/configs/jellyfin:/config
     tmpfs:
       - /cache
-    devices:
-      - /dev/dri:/dev/dri
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
