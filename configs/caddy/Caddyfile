@@ -28,7 +28,7 @@ jellyfin.tharindur.dev {
 }
 
 seerr.tharindur.dev {
-    reverse_proxy zeus:5055
+    reverse_proxy hades:5055
 }
 
 sonarr.tharindur.dev {
