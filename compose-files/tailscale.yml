@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     network_mode: host
     environment:
-      - TS_AUTHKEY=""
+      - TS_AUTHKEY=${TS_AUTHKEY}
     volumes:
       - /dev/net/tun:/dev/net/tun
     cap_add:
