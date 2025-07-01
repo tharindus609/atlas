@@ -5,8 +5,10 @@ services:
     restart: unless-stopped
     network_mode: host
     environment:
+      - TS_STATE_DIR=/var/lib/tailscale
       - TS_AUTHKEY=${TS_AUTHKEY}
     volumes:
       - /dev/net/tun:/dev/net/tun
+      - /mnt/flash/configs/tailscale:/var/lib/tailscale
     cap_add:
       - NET_ADMIN
