@@ -1,4 +1,0 @@
-include:
-  - compose-files/pihole.yaml
-  - compose-files/caddy.yaml
-  - compose-files/jellyseerr.yaml
