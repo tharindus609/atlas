@@ -11,7 +11,7 @@ tharindur.dev, www.tharindur.dev {
 }
 
 portainer.tharindur.dev {
-    reverse_proxy zeus:9443 {
+    reverse_proxy bifrost:9443 {
         transport http {
             tls
             tls_insecure_skip_verify
@@ -36,13 +36,13 @@ sonarr.tharindur.dev {
 }
 
 pihole.tharindur.dev {
-    reverse_proxy zeus:8080
+    reverse_proxy bifrost:8080
 }
 
 homebridge.tharindur.dev {
-    reverse_proxy zeus:8581
+    reverse_proxy bifrost:8581
 }
 
 homeassistant.tharindur.dev {
-    reverse_proxy zeus:8123
+    reverse_proxy bifrost:8123
 }
